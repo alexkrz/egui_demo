@@ -4,16 +4,25 @@ A demo GUI application using `egui` and `eframe`.
 
 ## References
 
-1. Getting started:
+1. Minimal `eframe` example:
+    - <https://docs.rs/eframe/latest/eframe/>
+
+2. `eframe` / `egui` hello_world:
+    - <https://github.com/emilk/egui/tree/main/examples/hello_world>
+
+3. Getting started blogpost:
     - <https://medium.com/@lyecre/building-cross-platform-apps-with-egui-and-rust-0a0fbb1779dc>
 
-2. More background information:
+4. More background information:
     - <https://hackmd.io/@Hamze/BkvEAvFayx>
     - Unfortunately, the code in this resource is already a bit outdated
 
-3. `eframe` template:
+5. `eframe` template:
     - <https://github.com/emilk/eframe_template>
     - Official template, but already contains many extra features like web GUI and app persistence
+
+6. Collection of `egui` examples:
+    - <https://egui.info/examples/>
 
 ## Remarks
 
