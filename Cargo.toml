@@ -6,5 +6,8 @@ edition = "2024"
 [dependencies]
 egui = "0.35"
 eframe = "0.35"
-egui_extras = { version = "0.35", features = ["all_loaders"] }
-image = { version = "0.25", features = ["jpeg", "png"] }
+# For image support:
+egui_extras = { version = "0.35", features = ["default", "image"] }
+
+[profile.release]
+opt-level = 2 # fast and small wasm
