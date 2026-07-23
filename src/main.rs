@@ -1,11 +1,11 @@
 use eframe::egui;
 
 fn main() -> eframe::Result {
-    let options = eframe::NativeOptions::default();
+    let native_options = eframe::NativeOptions::default();
 
     eframe::run_native(
-        "egui App",
-        options,
+        "My egui App",
+        native_options,
         Box::new(|cc| {
             cc.egui_ctx.set_visuals(egui::Visuals::dark()); //Visuals::dark() gets overwritten by native_options
             Ok(Box::new(MyApp::default()))
@@ -21,8 +21,8 @@ struct MyApp {
 }
 
 impl eframe::App for MyApp {
-    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        egui::CentralPanel::default().show(ctx, |ui| {
+    fn ui(&mut self, ui: &mut egui::Ui, _frame: &mut eframe::Frame) {
+        egui::CentralPanel::default().show(ui, |ui| {
             ui.heading("Welcome to egui!");
 
             ui.separator();
