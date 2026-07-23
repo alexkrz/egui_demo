@@ -7,7 +7,8 @@ fn main() -> eframe::Result {
         "My egui App",
         native_options,
         Box::new(|cc| {
-            cc.egui_ctx.set_visuals(egui::Visuals::dark()); //Visuals::dark() gets overwritten by native_options
+            // This gives us image support:
+            egui_extras::install_image_loaders(&cc.egui_ctx);
             Ok(Box::new(MyApp::default()))
         }),
     )
@@ -24,6 +25,12 @@ impl eframe::App for MyApp {
     fn ui(&mut self, ui: &mut egui::Ui, _frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ui, |ui| {
             ui.heading("Welcome to egui!");
+
+            ui.add(
+                egui::Image::new(egui::include_image!("../data/ferris.png"))
+                    .max_width(200.0)
+                    .corner_radius(10),
+            );
 
             ui.separator();
 
