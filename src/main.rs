@@ -7,7 +7,7 @@ fn main() -> eframe::Result {
         "egui App",
         options,
         Box::new(|cc| {
-            cc.egui_ctx.set_visuals(egui::Visuals::dark());
+            cc.egui_ctx.set_visuals(egui::Visuals::dark()); //Visuals::dark() gets overwritten by native_options
             Ok(Box::new(MyApp::default()))
         }),
     )
