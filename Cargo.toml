@@ -10,4 +10,4 @@ eframe = "0.35"
 egui_extras = { version = "0.35", features = ["default", "image"] }
 
 [profile.release]
-opt-level = 2 # fast and small wasm
+opt-level = 3 # Default opt-level is 3 (max)
